@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>YTParty - Watch YouTube with friends!</title>
+    <link rel="stylesheet" type="text/css" href="/primarystyle.css">
+    <link rel="stylesheet" type="text/css" href="/modal.css">
+    <link href="/favicon.png" rel="icon" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <meta property="og:site_name" content="Watch YouTube with friends!">
+    <meta property="og:url" content="https://ytparty.voidtech.de/">
+    <meta property="og:description" content="Create a room!">
+    <meta property="og:image" content="https://ytparty.voidtech.de/favicon.png" />
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#FF0000">
+</head>
+
+<body>
+    <div id="particles-js" class="particles"></div>
+    <h1 class="centre-align header header-main">YTParty</h1>
+    <h3 class="centre-align header header-sub">Watch YouTube with friends!</h3>
+
+    <button style="display:none" id="open-modal"></button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="close" class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu centre-align">
+        <h3 class="centre-align header header-sub">Create a room!</h3>
+        <p>Enter your video URL here:</p>
+        <input type="text" placeholder="www.youtube.com/watch?v=XXXXXXXXXXX" id="video-entry">
+        <p id="video-message"></p>
+        <p>Allow other people to control the room?</p>
+        <label class="switch">
+            <input type="checkbox" checked id="owner-only-checkbox">
+            <span class="slider"></span>
+        </label>
+        <p>Choose a custom room colour!</p>
+        <input type="color" value="#FF0000" id="room-colour-picker">
+        <p />
+        <p></p>
+        <button class="button hover-animation" onclick="createRoom()"><p class="button-text">Create!</p></button>
+    </div>
+    <a href="/home.html"><button class="back-button">⮜</button></a>
+    <img class="waves" src="/waves.svg">
+</body>
+
+<script src="/createroom.js"></script>
+<script src="/modal.js"></script>
+<script>
+    particlesJS.load('particles-js', "/particle-config.json", function() {
+        console.log('Particles loaded');
+    });
+</script>
+
+</html>

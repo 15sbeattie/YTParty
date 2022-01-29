@@ -1,2 +1,6 @@
 # YTParty
-Computer Science A-Level project (2021-2022)
+
+AQA Computer Science 7517 2022
+
+Candidate: 5012
+Center: 61719

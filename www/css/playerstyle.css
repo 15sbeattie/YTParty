@@ -1,0 +1,191 @@
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    color: white;
+    background-color: #960303;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: auto;
+    width: 20%;
+}
+
+button:hover {
+    background-color: #d80000;
+}
+
+input[type=text] {
+    color: white;
+    background-color: #292929;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    width: 100%;
+    float: left;
+}
+
+input[type=text]:focus {
+    border-bottom: 2px solid #8f2727
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+.div-float-left {
+    float: left;
+    padding: 3px;
+}
+
+.div-input-container {
+    width: 19%;
+}
+
+div {
+    padding: 0px;
+}
+
+.chat {
+    height: 93%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 19%;
+    background-color: #1a1a1a;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+}
+
+.chat-message {
+    background-color: #212121;
+    border-radius: 5px;
+    animation: slide-up 0.4s ease;
+    padding: 3px;
+}
+
+.chat-message:hover {
+    background-color: #292929;
+}
+
+p {
+    color: white;
+    font-family: Helvetica;
+    font-size: 14px;
+    display: inline;
+}
+
+p.msg-nickname {
+    font-size: 16px;
+    font-family: 'Paytone One', sans-serif;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+    display: inline;
+}
+
+img.user-image {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    padding-right: 5px;
+    display: inline;
+}
+
+.player {
+    padding: 0px;
+}
+
+ ::-webkit-scrollbar {
+    width: 5px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #ab1400;
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+
+button.action-complete {
+    background-color: green;
+}
+
+p.typing-message {
+    padding: 0%;
+    color: grey;
+    font-style: italic;
+}
+
+p.system {
+    color: grey;
+    font-style: italic;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.bold {
+    font-weight: bold;
+}
+
+p.underline {
+    text-decoration: underline;
+}
+
+p.strikethrough {
+    text-decoration: line-through;
+}
+
+p.cursive {
+    font-family: 'Lobster Two', cursive;
+    font-size: 20nopx;
+}
+
+p.big {
+    font-size: 35px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .2;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}
+
+.typing span {
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+.typing span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.typing span:nth-child(3) {
+    animation-delay: .4s;
+}
